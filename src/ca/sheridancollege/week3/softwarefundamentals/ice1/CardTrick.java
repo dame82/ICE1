@@ -21,6 +21,10 @@ public class CardTrick {
             c.setSuit(Card.SUITS[ran.nextInt(3)]);
             magicHand[i] = c;
         }
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Spades");
 
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
