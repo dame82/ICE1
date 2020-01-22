@@ -7,20 +7,37 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  *
  * @author dancye
  */
+
+import java.util.*;
 public class CardTrick {
 
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
+        Random ran = new Random();
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setValue(ran.nextInt(13) + 1);
+            c.setSuit(Card.SUITS[ran.nextInt(3)]);
+            magicHand[i] = c;
         }
 
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter card value and suit: ");
+        int getValue = sc.nextInt();
+        String getSuit = sc.nextLine();
+        boolean found = false;
+        
+        if(found){
+            System.out.println("Your card is: " + getValue + getSuit);
+        }
+        
+        
+        
+        
     }
 
 }
